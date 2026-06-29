@@ -1,0 +1,14 @@
+# ESP-IDF build artifacts
+firmware/build/
+firmware/sdkconfig
+firmware/sdkconfig.old
+
+# Component manager — re-fetched by `idf.py reconfigure` (then re-run patches)
+firmware/managed_components/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp

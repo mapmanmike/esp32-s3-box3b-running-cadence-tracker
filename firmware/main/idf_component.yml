@@ -1,0 +1,13 @@
+## Pull in the official ESP-BOX-3 BSP (provides LCD + LVGL for BOX-3/3B).
+## Versions pinned to match the known-good factory_demo dependency set:
+## BSP 1.1.3 expects the LVGL 8.x and button 3.x APIs.
+dependencies:
+  espressif/esp-box-3: "1.1.3"
+  espressif/button: "3.5.0"
+  lvgl/lvgl: "8.4.0"
+  # Pin codec_dev to the legacy-I2C version (matches factory_demo). Newer
+  # 1.5.x uses the new i2c_master driver and conflicts with the BSP's
+  # legacy driver/i2c.h, causing a startup abort (check_i2c_driver_conflict).
+  espressif/esp_codec_dev: "1.1.0"
+  idf:
+    version: ">=5.1"

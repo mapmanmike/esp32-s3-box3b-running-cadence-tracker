@@ -1,0 +1,16 @@
+# Route console to native USB so logs work over USB-C
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+# 16MB flash (BOX-3B)
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+# Octal PSRAM (ESP32-S3-BOX-3/3B uses 16MB octal @ 80MHz)
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_ESP32S3_DATA_CACHE_64KB=y
+# LVGL fonts used by the cadence UI
+CONFIG_LV_FONT_MONTSERRAT_20=y
+CONFIG_LV_FONT_MONTSERRAT_28=y
+CONFIG_LV_FONT_MONTSERRAT_48=y
+# BOX-3 SPI panel expects byte-swapped RGB565 (matches factory_demo); without
+# this, colors render wrong (near-black bg shows as purple).
+CONFIG_LV_COLOR_16_SWAP=y
