@@ -27,8 +27,8 @@ static const char *TAG = "cadence";
 /* ---- Tunable step-detection parameters (iterate with the serial log) ---- */
 #define SAMPLE_HZ        200          /* accelerometer poll rate */
 #define SAMPLE_PERIOD_MS (1000 / SAMPLE_HZ)
-#define THRESHOLD_G      0.35f        /* impact magnitude above baseline to count */
-#define RELEASE_G        0.20f        /* must fall below this before next count (hysteresis) */
+#define THRESHOLD_G      0.22f        /* impact magnitude above baseline to count */
+#define RELEASE_G        0.12f        /* must fall below this before next count (hysteresis) */
 #define MIN_STEP_MS      200          /* refractory: max ~300 spm, debounces one bang */
 #define WINDOW_MS        10000        /* rolling window for cadence average */
 #define STALE_MS         3000         /* no step in this long -> cadence decays to 0 */
