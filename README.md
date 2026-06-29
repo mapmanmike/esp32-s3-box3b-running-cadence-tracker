@@ -14,6 +14,13 @@ average cadence, total steps, duration, and a cadence-over-time line graph →
 > The BOX-3B is the basic variant of the ESP32-S3-BOX-3 (same SoC/mainboard,
 > fewer accessories). Everything here targets `esp32s3` and the `esp-box-3` BSP.
 
+## In action
+Running on a treadmill console — idle/START screen and live cadence at 168 steps/min:
+
+| Idle (START) | Running (live cadence) |
+|:---:|:---:|
+| ![Idle screen with START button](docs/images/idle-start.jpg) | ![Running screen showing 168 steps/min and STOP](docs/images/running-cadence.jpg) |
+
 ## Repo layout
 ```
 firmware/                 ESP-IDF project (the cadence app)
